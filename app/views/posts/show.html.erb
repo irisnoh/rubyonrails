@@ -3,8 +3,31 @@
 
 <section class="section">
     <div class="container">
-        <div class="content">
-            <% @post.content %>
+        <nav class="level">
+        <!-- Left Side -->
+        <div class="level-left">
+            <p class="level-item">
+                <strong> Actions </strong>
+            </p>
         </div>
+
+        <!-- Right Side -->
+        <div class="right-left">
+            <p class="right-item">
+                <%= link_to "Edit", edit_post_path(@post), class: "button" %>
+            </p>
+            <p class="level-item">
+                <!-- TODO: Add rails functionality -->
+                <a class="button is-danger"> Delete </a>
+            </p>
+        </div>
+    </nav>
+    <hr />
+
+    <div class="content">
+        <%= @post.content %>
     </div>
+ </div>
 </section>
+
+<section class="comments"></section>
